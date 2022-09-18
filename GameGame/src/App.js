@@ -9,7 +9,7 @@ const App = () => {
     const [searchTerm, setSearchTerm] = useState('');
 
     const searchGames = async (Name) => {
-        const response = await fetch(`http://localhost:3000/games?_limit=100&Name_like=^${Name}`)
+        const response = await fetch(`https://my-json-server.typicode.com/khitty/gamegamedb/games?_limit=12&Name_like=^${Name}`)
             .then(response => response.json())
             .then(data => setGames(data));
     }
